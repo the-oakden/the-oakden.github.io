@@ -28,7 +28,7 @@ style = "class"
 
 [extra]
 copy_button = false
-favicon = "images/favicon.ico"
+favicon = "images/favicon.png"
 # fediverse_creator = ""
 header_title = "The Oakden"
 show_default_author = false
