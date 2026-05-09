@@ -1,16 +1,61 @@
-# The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://the-oakden.codeberg.page"
+theme = "terminus"
+compile_sass = true
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = false
+title = "Oakden's Website"
+# description = ""
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+default_language = "en"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+author = "Oakden"
 
-[markdown]
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+]
+
+# [markdown]
+# bottom_footnotes = true
+# highlight_code = true
+# highlight_theme = "monokai"
+# render_emoji = true
+# smart_punctuation = true
 
 [markdown.highlighting]
-theme = "catppuccin-mocha"
+theme = "monokai"
+style = "class"
 
 [extra]
-# Put all your custom variables here
+copy_button = false
+favicon = "images/favicon.ico"
+# fediverse_creator = ""
+header_title = "The Oakden"
+show_default_author = false
+
+main_menu = [
+    { name = "home", url = "@/_index.md", trailing_slash = true },
+    # { name = "about", url = "@/about/_index.md", trailing_slash = true },
+    # { name = "projects", url = "@/projects/_index.md", trailing_slash = true },
+    # { name = "résumé", url = "resume.pdf", new_tab = true },
+    { name = "rss", url = "rss.xml" },
+]
+
+socials = [
+    { name = "github", url = "https://github.com/the-oakden" },
+    { name = "codeberg", url = "https://codeberg.org/the-oakden" },
+]
+
+[extra.content_security_policy]
+enable = true
+allowed_domains = [
+    # { directive = "connect-src", domains = ["'self'", "cloudflareinsights.com"] },
+    # { directive = "frame-src", domains = ["'self'", "utteranc.es"] },
+    # { directive = "img-src", domains = ["'self'", "data:"] },
+    # { directive = "script-src", domains = ["'self'", "utteranc.es", "static.cloudflareinsights.com"] },
+    # { directive = "style-src-elem", domains = ["'self'", "'unsafe-inline'", "utteranc.es"] },
+]
+
+[extra.theme_switcher]
+enable = false
+default = "terminus"
