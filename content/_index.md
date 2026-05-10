@@ -8,4 +8,4 @@ framed = true
 +++
 
 # Hello! 👋 
-Welcome to my website!
+Welcome to my website! If you have any comments, questions, or concerns, feel free to [create an issue](https://codeberg.org/the-oakden/pages/issues). Alternatively, star this repo on [Codeberg](https://codeberg.org/the-oakden/pages). 
