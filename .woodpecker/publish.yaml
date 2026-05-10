@@ -34,8 +34,8 @@ steps:
     image: alpine/git
     environment:
       # secrets must be set in Woodpecker configuration
-      ZOLA_CI:
-        from_secret: cbtoken
+      TOKEN:
+        from_secret: pages_ci
       MAIL:
         from_secret: cbmail
     commands:
