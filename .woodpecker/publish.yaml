@@ -29,6 +29,7 @@ steps:
       - zola build
     when:
       event: [push, pull_request]
+      branch: main
 
   publish:
     image: alpine/git
@@ -56,4 +57,5 @@ steps:
       - git push
     when:
       event: [push]
+      branch: main
 
