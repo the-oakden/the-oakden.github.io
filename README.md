@@ -9,5 +9,5 @@ I am open to suggestions on the content of the website, though any stylistic sug
 ## License:
 - All page content in the `content` directory is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-- The website source code is licensed under the [GNU General Public License v3.0 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.en.html) except for the source code in `themes/terminus` which is licensed under the [MIT License](https://opensource.org/license/mit).  
+- The website source code is licensed under the [GNU General Public License v3.0 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.en.html) except for the source code in `themes/terminus` and `.github/workflows/deploy.yml` which is licensed under the [MIT License](https://opensource.org/license/mit).  
 
