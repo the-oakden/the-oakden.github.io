@@ -23,7 +23,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/main'
+    if: github.ref != 'refs/heads/master'
     steps:
     - name: Checkout
       uses: actions/checkout@main
@@ -40,8 +40,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
-    - name: Patch CSS font-face paths
-      run: sed -i "s,url('/,url('/terminus/,g" ./sass/css/_fonts.scss
     - name: Build and deploy
       uses: shalzz/zola-deploy-action@v0.22.1
       env:

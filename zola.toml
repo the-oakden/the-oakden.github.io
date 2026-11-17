@@ -1,4 +1,4 @@
-base_url = "https://the-oakden.codeberg.page"
+base_url = "https://the-oakden.github.io"
 theme = "terminus"
 compile_sass = true
 
