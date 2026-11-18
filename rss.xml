@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Oakden&#x27;s Website</title>
+      <link>https://the-oakden.github.io</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://the-oakden.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Building a Simple Tesla Coil: Part I</title>
+          <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+          <author>Oakden</author>
+          <link>https://the-oakden.github.io/blog/simple-tesla-coil-part-i/</link>
+          <guid>https://the-oakden.github.io/blog/simple-tesla-coil-part-i/</guid>
+          <description xml:base="https://the-oakden.github.io/blog/simple-tesla-coil-part-i/">&lt;section class=&quot;alert warning&quot; role=&quot;note&quot; aria-labelledby=&quot;9&amp;#x2F;y1hlO9&quot;&gt;
+    &lt;div class=&quot;alert-icon alert-icon-warning&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class=&quot;alert-content&quot; role=&quot;presentation&quot;&gt;
+        &lt;strong id=&quot;9&amp;#x2F;y1hlO9&quot; class=&quot;alert-title&quot; aria-hidden=&quot;true&quot;&gt;Safety Warning&lt;&#x2F;strong&gt;
+        &lt;p&gt;This project involves &lt;strong&gt;HIGH VOLTAGES&lt;&#x2F;strong&gt; and &lt;strong&gt;ELECTRICAL INTERFERENCE&lt;&#x2F;strong&gt; that can be &lt;strong&gt;DANGEROUS OR DEADLY&lt;&#x2F;strong&gt; especially to those with medical devices such as pacemakers. There are also other dangers potentially associated with this project such as respiratory harm from inhaling gases created by the electrical arcs, skin burns from the arcs, or nerve damage. &lt;strong&gt;I AM NOT RESPONSIBLE&lt;&#x2F;strong&gt; for any damage or consequences of attempting to replicate my experiments. &lt;strong&gt;DO NOT ATTEMPT&lt;&#x2F;strong&gt; to construct this if you are not a professional. This is for educational purposes only.&lt;&#x2F;p&gt;
+
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;section&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction:&lt;a class=&quot;post-anchor&quot; href=&quot;#introduction&quot; aria-label=&quot;Anchor link for: introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;p&gt;Tesla coils are amazing devices that can not only transform relatively low voltages into extremely high voltages, but also do so in a visually stunning way. Aside from the striking bolts of lighting that they can produce, their ability to wirelessly transfer energy is also remarkable.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;tesla.jpg&quot; alt=&quot;Nikola Tesla with his Tesla coils&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;Nikola Tesla sitting with his Tesla coils&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;As shown above, the typical Tesla coil consists of a large coil of thin wire with a small coil of thicker wire around the base. At the top of the coil is a wide, smooth metal top load that arcs propagate from.&lt;&#x2F;p&gt;
+&lt;p&gt;The first Tesla coil was designed by the man that the device is named after, Nikola Tesla, in 1891. He originally designed them for use in wireless energy transfer, yet this proved to be impractical. Though they do not have any practical use cases, their ability to wirelessly transfer energy, play music, and produce frightening lightning shows are extremely alluring. Further, they serve as an excellent project to learn about electromagnetic fields, inductance, and electronics in general in a very visually stunning way.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is the first part in a series of blog posts about designing and optimizing a Tesla coil. Over the course of this series, I will explore the underlying theory and physics of Tesla coils and experiment with the Slayer Exciter design. I will document this journey to produce data, resources, and research to aid others and myself in understanding these amazing devices. To catch up on the latest post in this series add the following &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;the-oakden.codeberg.page&#x2F;rss.xml&quot;&gt;RSS link&lt;&#x2F;a&gt; to your favorite RSS reader. Learn more about RSS &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;guides.library.yale.edu&#x2F;keepingup&#x2F;basics&quot;&gt;here&lt;&#x2F;a&gt; or to find a reader, read this &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;opensource.com&#x2F;article&#x2F;17&#x2F;3&#x2F;rss-feed-readers&quot;&gt;article&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If you have any comments, questions, concerns, or would like to make any suggestions about this project, I encourage you to open an &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&#x2F;issues&quot;&gt;issue&lt;&#x2F;a&gt; in the project repository (The &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;docs.codeberg.org&#x2F;getting-started&#x2F;issue-tracking-basics&#x2F;&quot;&gt;Codeberg Docs&lt;&#x2F;a&gt; have more information about issues and how to use them. The project &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC#contributing&quot;&gt;README&lt;&#x2F;a&gt; also has information about contributing). If you have any comments, questions, concerns, or suggestions about this website or blog post, please leave an issue on the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;pages&quot;&gt;repository&lt;&#x2F;a&gt; for this website (There is also information about contributing in the website &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;pages#contributing&quot;&gt;README&lt;&#x2F;a&gt;). I am sure that I have made a mistake in this post, and though I hope that others can learn from my writings, I do this mainly to better understand topics myself, so please do not hold back any corrections or opinions.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;goal&quot;&gt;Goal:&lt;a class=&quot;post-anchor&quot; href=&quot;#goal&quot; aria-label=&quot;Anchor link for: goal&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;p&gt;The goal for this iteration is to create a functional, proof-of-concept Slayer Exciter Tesla Coil (SETC) that can produce visible arcs. This will primarily be based off of previous designs. Still, I will attempt to gain a basic understanding of the theory behind the coil and identify areas to research.&lt;&#x2F;p&gt;
+&lt;p&gt;Everything related to this project which includes 3D files, code, schematics, and more can be found in my &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&quot;&gt;Codeberg repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;research&quot;&gt;Research:&lt;a class=&quot;post-anchor&quot; href=&quot;#research&quot; aria-label=&quot;Anchor link for: research&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;p&gt;Most Tesla coil designs, namely the spark gap Tesla coil (SGTC), require rather high input voltages, but there is a simpler design, the Slayer Exciter Tesla Coil (SETC), that can run off of a nine volt battery. This is the design that will be constructed in this iteration.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;theory&quot;&gt;Theory&lt;a class=&quot;post-anchor&quot; href=&quot;#theory&quot; aria-label=&quot;Anchor link for: theory&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;p&gt;This will be a quick summary of the theory of the Slayer Exciter and Tesla coils in general. I hope to discuss more details about the physics behind the SETC in future iterations, but this first iteration will be limited to a simple overview.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;transformers&quot;&gt;Transformers&lt;a class=&quot;post-anchor&quot; href=&quot;#transformers&quot; aria-label=&quot;Anchor link for: transformers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Tesla coils are fundamentally transformers, which means that they feed an alternating current (AC) into a coil of wire called the primary coil, which is in close proximity to another coil called the secondary coil. Given Faraday&#x27;s law of induction, the changing electromagnetic field produced by the primary induces a current in the secondary. The voltage in the secondary compared to the voltage in the primary is dependent on the ratio of turns from the secondary to the primary and is given by:&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+\frac{V_s}{V_p} = \frac{N_s}{N_p}
+$$&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;resonance&quot;&gt;Resonance&lt;a class=&quot;post-anchor&quot; href=&quot;#resonance&quot; aria-label=&quot;Anchor link for: resonance&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;The SETC, however, is a special type of transformer that operates at the resonant frequency of the secondary coil. This transformer, the resonant transformer, is much more efficient than a normal transformer especially at long distances and without a ferromagnetic core. &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; To practically understand resonance in this circuit, it is often useful to imagine a swing where the maximum height of the swing is the amplitude of the voltage in the secondary. Anyone who has been on a swing at a park knows that when another person repeatedly pushes on them at just the right time, they will swing higher.&lt;&#x2F;p&gt;
+&lt;p&gt;In the case of the Tesla coil, however, the &quot;person&quot; doing the pushing is the primary coil inducing a voltage. If this primary is in perfect tune with the resonance of the secondary, the secondary can produce very high voltages very efficiently. There is an excellent video that demonstrates this principle called &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=fT5_MmeSeDU&quot;&gt;&quot;Resonance and Tesla Coil Basics&quot;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;To make the coil resonate, the SETC uses an LC circuit, which is simply a circuit where there is an inductance, $L$, from the secondary coil and a capacitance, $C$, from the parasitic capacitance between the coil, its soundings, and itself. The resonant frequency of this circuit, $f$ is given by:
+$$
+f = \frac{1}{2 \pi \sqrt{L C}}
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;The oscillations generated by this resonant circuit are used as feedback to drive the circuit that switches power to the primary coil. Thus, the magnetic field created by the primary will induce a current into the secondary exactly at its resonant frequency without the need to manually tune it to the secondary&#x27;s exact resonant frequency.&lt;&#x2F;p&gt;
+&lt;p&gt;Most solid state Tesla coils (SSTCs) use an antenna to receive feedback from the changing field generated by the secondary and feed this to a mosfet driver IC. The SETC, however, accomplishes this by simply attaching the bottom of the secondary to the base of a transistor. How this practically works will be explained in a later section.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;mathematical-model&quot;&gt;Mathematical Model:&lt;a class=&quot;post-anchor&quot; href=&quot;#mathematical-model&quot; aria-label=&quot;Anchor link for: mathematical-model&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Soon, we will see that the resonant frequency of the coil is very important in designing it. Thus, it will be useful to determine the resonant frequency of the coil using only its dimensions.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;inductance-l&quot;&gt;Inductance $(L)$:&lt;a class=&quot;post-anchor&quot; href=&quot;#inductance-l&quot; aria-label=&quot;Anchor link for: inductance-l&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h4&gt;
+&lt;p&gt;Consequently, this means that we would need to calculate the inductance and parasitic capacitance of the coil. Beginning with the inductance, I initially used Wheeler&#x27;s formula (shown below) though I am unsure why I used this formula as it only works when the diameter and length are very similar in size (when the length, $l$, is less than $0.4$ times the diameter, $D$) which is not the case for most Tesla coils.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;
+$$
+L = \frac{N^2 r^2}{9r +10l}
+$$
+However, the formula for the inductance of a solenoid produces much more accurate results. This calculates inductance where $N$ is the number of turns of the coil, $\mu_0$ is the magnetic permeability constant of free space, $A$ is the cross-sectional area of the coil, and $l$ is the length, in this case height, of the coil.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#4&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+L = \frac{N^2 \mu_0 A}{l}
+$$&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;parasitic-capacitance-c&quot;&gt;Parasitic Capacitance $(C)$:&lt;a class=&quot;post-anchor&quot; href=&quot;#parasitic-capacitance-c&quot; aria-label=&quot;Anchor link for: parasitic-capacitance-c&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h4&gt;
+&lt;p&gt;The parasitic capacitance of an air core inductor can be determined with Medhurst&#x27;s formula where capacitance, $C$, is given by $H$, a constant determined by the ratio of length to diameter, times $D$, the diameter of the coil.
+$$
+C = H D
+$$
+The link to the original paper where this is explained can be found in the footnotes, but the table with the values for $H$ is shown below.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#5&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;div class=&quot;wide-container&quot;&gt;
+    &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;$\frac{\text{Length}}{\text{Diameter}}$&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;$H$&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;$\frac{\text{Length}}{\text{Diameter}}$&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;$H$&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;$\frac{\text{Length}}{\text{Diameter}}$&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;$H$&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;50&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;5.8&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;5.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.81&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.70&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.47&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;40&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;4.6&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;4.5&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.77&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.60&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.48&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;30&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;3.4&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;4.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.72&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.50&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.50&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;25&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;2.9&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;3.5&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.67&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.43&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.32&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;20&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;2.36&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;3.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.61&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.40&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.54&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;13&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;1.86&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;2.3&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.36&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.33&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.57&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;10&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;1.32&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;2.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.50&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.30&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.60&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;9.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;1.22&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;1.3&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.47&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.25&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.64&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;8.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;1.12&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;1.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.46&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.20&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.70&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;7.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;1.01&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.90&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.46&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.15&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.79&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;6.0&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.92&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.80&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.46&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.10&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;0.96&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+
+&lt;&#x2F;div&gt;
+&lt;h4 id=&quot;calculation-script&quot;&gt;Calculation Script:&lt;a class=&quot;post-anchor&quot; href=&quot;#calculation-script&quot; aria-label=&quot;Anchor link for: calculation-script&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h4&gt;
+&lt;p&gt;I combined both of these equations in a simple &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;numbat.dev&#x2F;docs&#x2F;&quot;&gt;numbat&lt;&#x2F;a&gt; script. Though I should have used something more common such as python, the fact that numbat treats physical dimensions and units as types by default is very convenient. I am also very familiar with it since I regularly use the interactive calculator. Aside from the calculations for inductance and capacitance, the script also estimates the number of turns of wire so the only dimensions to provide are the length of the coil, diameter, and the value for $H$ (I could have found a way to have this be automatically inserted but I have yet to do that). These value are simply provided by changing the variables at the top of the &lt;code&gt;calulations.nbt&lt;&#x2F;code&gt; file that can be found in the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&#x2F;src&#x2F;branch&#x2F;master&#x2F;math&#x2F;calculations.nbt&quot;&gt;repository&lt;&#x2F;a&gt; for the project. More information about running the script can can be found in the project&#x27;s &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&#x2F;src&#x2F;branch&#x2F;master#readme&quot;&gt;README&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;previous-designs&quot;&gt;Previous Designs:&lt;a class=&quot;post-anchor&quot; href=&quot;#previous-designs&quot; aria-label=&quot;Anchor link for: previous-designs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Now that the theory of a SETC is understood, we can explore some previous designs that implement these concepts.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=AehL3BodduE&quot;&gt;Blueprint&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;This video begins by explaining the main components of the circuit: a power source, transistor, secondary and primary coils, as well as resistor. However, the design lacks an LED across the base and emitter pins of the transistor unlike the others.&lt;&#x2F;li&gt;
+&lt;li&gt;The video also details the physics of the circuit and Lenz&#x27;s Law.&lt;&#x2F;li&gt;
+&lt;li&gt;To attempt to fix the problem of transistor overheating, multiple transistors are placed in parallel to divide the current.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=fseBG8EluZ0&quot;&gt;Jim&#x27;s Cool Stuff&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;This video discusses much more of the theory of a slayer exciter and details improvements that can be made to the circuit to improve its longevity.&lt;&#x2F;li&gt;
+&lt;li&gt;The video also demonstrates how to experimentally find the resonant frequency of the secondary coil&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=xImmwL5MR0o&quot;&gt;Hyperspace Pirate&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Though the final design in this video does not use a traditional SETC circuit, it demonstrates how to construct one, its shortcomings, and how it can be improved.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;design-explanation&quot;&gt;Design Explanation:&lt;a class=&quot;post-anchor&quot; href=&quot;#design-explanation&quot; aria-label=&quot;Anchor link for: design-explanation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;materials&quot;&gt;Materials:&lt;a class=&quot;post-anchor&quot; href=&quot;#materials&quot; aria-label=&quot;Anchor link for: materials&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;The materials required for this iteration are listed below.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 X Thirty-Two AWG Enameled Copper Wire&lt;&#x2F;li&gt;
+&lt;li&gt;1 X Sixteen AWG Enameled Copper Wire&lt;&#x2F;li&gt;
+&lt;li&gt;1 X TIP41C Bipolar Junction Transistor&lt;&#x2F;li&gt;
+&lt;li&gt;4 X 10K Ohm variable resistors&lt;&#x2F;li&gt;
+&lt;li&gt;1 X 2K Ohm resistor&lt;&#x2F;li&gt;
+&lt;li&gt;1 X 5K Ohm resistor&lt;&#x2F;li&gt;
+&lt;li&gt;1 X LED&lt;&#x2F;li&gt;
+&lt;li&gt;1 X Breadboard&lt;&#x2F;li&gt;
+&lt;li&gt;2 X Compression springs&lt;&#x2F;li&gt;
+&lt;li&gt;1 X 1 in diameter tube at least 5 in long&lt;&#x2F;li&gt;
+&lt;li&gt;Assorted jumper wires&lt;&#x2F;li&gt;
+&lt;li&gt;Kapton Tape&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;secondary-coil-and-transistor&quot;&gt;Secondary Coil and Transistor:&lt;a class=&quot;post-anchor&quot; href=&quot;#secondary-coil-and-transistor&quot; aria-label=&quot;Anchor link for: secondary-coil-and-transistor&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Undoubtedly, the most important component of any Tesla coils are the coils themselves. Given that the parameters of the secondary determine the resonant frequency of the circuit, I decided to define this before designing anything else.&lt;&#x2F;p&gt;
+&lt;p&gt;The main constraint for the resonant freqeuncy of the secondary is our second most important component—the transistor. While some SSTCs use more complex circuitry to receive feedback from the secondary and drive the primary, the SETC uses a single transistor. In the designs I examined this was often a NPN Bipolar Junction Transistor (BJT). Specifically, they used the TIP31C, but I substituted this for the TIP41C, which could handle 100V opposed to the 60V of the TIP31C. This voltage tolerance may be important as when the primary coil shuts off, its electromagnetic field will collapse and will dump a large amount of current onto the transistor.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;transistor.jpg&quot; alt=&quot;Image of a TIP41C transistor&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;The TIP41C used in the circuit&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;The max frequency of the TIP41C is 3 MHz, so theoretically the max resonant frequency of our coil could be 3 MHz, yet the video from Jim&#x27;s Cool Stuff explains that when operating under the demanding conditions of the SETC this is often closer to 1 or 2 MHz. Thus, the resonant frequency should be kept in this range; however, I am curious to see if the transistor can handle frequencies within its normal operation range.&lt;&#x2F;p&gt;
+&lt;p&gt;To begin designing the coil, I chose a aspect ratio of 1:5 since it was recommended in Kaizer Power Electronics&#x27;s SSTC design guide.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#6&quot;&gt;6&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; To keep the coil small for this first iteration, a diameter of one inch was selected.&lt;&#x2F;p&gt;
+&lt;p&gt;Given the aspect ratio, this means that it will be five inches tall. Plugging these values into the previously mentioned script, we see that our resonant frequency is 3.08 MHz which is far above our desired range and the TIP41C&#x27;s, but this should still theoretically work and can be decreased by increasing the capacitance by adding a topload.&lt;&#x2F;p&gt;
+&lt;p&gt;PVC pipes are typically used to wind the secondary; however, I chose to design a 3D printed cylinder as it would be easier to attach it to a drill bit. The link to the spool for the secondary can be found in the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&#x2F;src&#x2F;branch&#x2F;master&#x2F;models&quot;&gt;models directory&lt;&#x2F;a&gt; in the project repository. The spool is called &lt;code&gt;Secondary.FCStd&lt;&#x2F;code&gt; and the drill bit adapter is called &lt;code&gt;Drill_Bit.FCStd&lt;&#x2F;code&gt;. Refer to the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&#x2F;src&#x2F;branch&#x2F;master&#x2F;README.md#building&quot;&gt;README&lt;&#x2F;a&gt; to learn how to export these files as STLs. Alternatively, open the &lt;code&gt;3d-models-v0.0.0.zip&lt;&#x2F;code&gt; file located in the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&#x2F;releases&#x2F;tag&#x2F;v0.0.0&quot;&gt;v0.0.0 release&lt;&#x2F;a&gt; for &lt;code&gt;.stl&lt;&#x2F;code&gt; files of all models.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;winding_bit.png&quot; alt=&quot;Three images showing the assembly of a 3D printed spool to wind a Tesla coil and a drill bit adapter to use a drill to wind the coil&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;The first image from left to right shows an expanded view of how the pieces will connect. The second shows the adapter pushed halfway into the spool, and the drill bit pressed all the way in. The third shows the final assembly.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;To wind the coil, thirty-two gauge enameled copper wire was used as it was thin enough to allow a high number of turns, which increases the output voltage, but still thick enough to be easily handled.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;32_guage_wire.jpg&quot; alt=&quot;Image of the enameled copper wire used to wind the secondary coil&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;The wire used to wind the secondary&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;With the 3D printed tube, to begin winding the coil I first inserted the wire into the groove provided in the coil and taped it to the bottom as shown below.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;taped_secondary.jpg&quot; alt=&quot;Image of the enameled copper wire going through the groove on the secondary spool&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;The groove came out rather mangled in this print, but it should look cleaner.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;While winding the coil, it is extremely convenient to place the spool of wire in some type of holder, so I placed it on an old soldering stand. I found it easiest to have the spool in between me and the coil, or even on the floor, so that I could guide the wire with one hand while I controlled the drill with the other. Placing a towel below the coil also helps to support it during winding. My coil winding setup is shown below.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;winding_setup.jpg&quot; alt=&quot;Image of the coil winding setup&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;It is more ergonomic to place the spool shown at the bottom beneath the table you are winding on.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;h2 id=&quot;electronics&quot;&gt;Electronics:&lt;a class=&quot;post-anchor&quot; href=&quot;#electronics&quot; aria-label=&quot;Anchor link for: electronics&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;With the primary coil wound, we can turn our attention to the driver circuit shown in this schematic.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;schematics.svg&quot; alt=&quot;Image of the schematics for the Slayer Exciter circuit&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;To find the link the to KiCad file for this schematic, &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&#x2F;src&#x2F;branch&#x2F;master&quot;&gt;click here&lt;&#x2F;a&gt;&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;Returning to the transistor (shown as Q1 in the schematic) it is positioned such that the collector is connected to the primary and the emitter to ground. The base of the transistor is connected both to the positive rail of the circuit and to the bottom of the secondary coil. When the circuit is first powered on, current flows through the biasing resistors (shown as R1-R6) to the base of the transistor turning it on. Before continuing it is important to note that the resistor&#x27;s function is to limit current to the base of the transistor as the base current must be smaller than the collector current shown by the following equation where $\beta$ changes for each transistor.&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+I_C = \beta I_B \implies I_C &amp;gt; I_B
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;Further, absence of a resistor would cause the transistor to draw too much current and destroy itself. Given that the transistor will be running at very high frequencies it will begin to heat up. To combat this, I clamped it to an old CPU heat sink and taped the thermometer from my multimeter to it so I could monitor its temperature.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;transistor_on_heatsink.jpg&quot; alt=&quot;Image of a transistor on a heatsink with a thermometer taped to it&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;Taping the thermometer helps keep it in place while the transistor is clamped down.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;On the topic of protecting the transistor, the LED marked D1 protects the base from the large negative voltage spikes of the secondary. This works when the breakdown voltage of the diode is met and it allows the current from the secondary to conduct to ground instead of overloading the base of the transistor. Theoretically, this should mean that the voltage at the base of the transistor should never exceed the breakdown voltage of the diode used. This voltage should be negative and will pull the base of the transistor down at just the right moment. Why this voltage is negative will be explained in a future iteration.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;blue_led.jpg&quot; alt=&quot;Image of a blue Light Emitting Diode&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;This diode should help to keep the voltages at the base of the transistor low and protect the base from the large negative voltgaes created by the secondary.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;The last component is the primary coil which will simply five turns of 16 AWG enameled copper wound around the base. Given that the wire was rather stiff, it expanded about two or three millimeters after winding giving it some distance from the primary so that there would not be any electrical arcs in between the primary and secondary. The enamel was scraped from the edges of the wire, and I placed an extension spring at the end to connect it to a breadboard jumper wire as shown below.&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;primary_connection_spring.JPG&quot; alt=&quot;Image of a compression spring used to connect the primary coil to a breadboard jumper wire&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;Always ensure that the enamel is scraped off the wire so that the spring can make a good electrical connection. Do the scraping out doors or with respiratory protection.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;p&gt;All this was placed on a breadboard as shown below:&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;circuit_on_breadboard.jpg&quot; alt=&quot;Image of a Slayer Exciter Tesla Coil on a breadboard&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;The device shown on the right is a adjustable power supply, but you may simply use a 9V battery. The device in the top left corner is a multimeter that is in temperature reading mode with the probe on the transistor.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;h1 id=&quot;observations&quot;&gt;Observations:&lt;a class=&quot;post-anchor&quot; href=&quot;#observations&quot; aria-label=&quot;Anchor link for: observations&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;p&gt;After powering on the circuit at 9V, the LED was illuminated and touching a metal object to the spring I attached to the top to keep the wire in place produced small arcs that are shown in the next section.&lt;&#x2F;p&gt;
+&lt;p&gt;There were no notable temperature changes observed using the multimeter either. However, as I increased the voltage to 12V the transistor began to heat up and it quickly died once 12V was reached.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;transistor-voltages&quot;&gt;Transistor Voltages:&lt;a class=&quot;post-anchor&quot; href=&quot;#transistor-voltages&quot; aria-label=&quot;Anchor link for: transistor-voltages&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I wanted to test voltages at the base of the transistor to ensure that the diode was doing its job to protect the base from the voltage spikes of the secondary as well as the voltage at the collector to see what voltages the inductive flyback from the primary was producing. However, my oscilloscope seems to be broken, so I will leave these tests to the next iteration.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;coupling-coefficient&quot;&gt;Coupling Coefficient:&lt;a class=&quot;post-anchor&quot; href=&quot;#coupling-coefficient&quot; aria-label=&quot;Anchor link for: coupling-coefficient&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Though I do not have the tools to measure the inductance and determine the coupling coefficient of the coils (the coupling coefficient describes the relationship between the secondary and primary coil), I did lightly experiment with the relationship between the primary and secondary. Notably, I found that even if the number of windings is held constant, spreading them over a greater distance improves the performance of the circuit as well as arc length. Further, decreasing the number of turns, and spreading them over a greater distance would also improve the performance and arc size. This is likely due to the fact that this increases the winding ratio, which as we saw in the theory section would increase the output voltage.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;performance&quot;&gt;Performance:&lt;a class=&quot;post-anchor&quot; href=&quot;#performance&quot; aria-label=&quot;Anchor link for: performance&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;wireless-power&quot;&gt;Wireless Power&lt;a class=&quot;post-anchor&quot; href=&quot;#wireless-power&quot; aria-label=&quot;Anchor link for: wireless-power&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Despite the fact that the readings on my oscilloscope should not be trusted, by simply bringing the probes within one to two inches of the coil, I was able to pick up a 3 MHz sine wave. This is remarkably close to our predicted frequency of 3.08 MHz. This signal would consistently fluctuate from roughly 2.8 MHz when the scope was near the coil to 3 MHz as I brought the probes farther away from the coil. This could simply be variations in readings from my scope, but given that the fluctuations were very consistent over multiple testing periods, it was likely due to my, hand, body, or probe changing the parasitic capacitance and thus resonant frequency of the coil. This was explained in the video by Jim&#x27;s Cool Stuff.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;arcs&quot;&gt;Arcs:&lt;a class=&quot;post-anchor&quot; href=&quot;#arcs&quot; aria-label=&quot;Anchor link for: arcs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;The images below show the arcs that the coil was able to produce. The probe at the top is my multimeter probe connected to the ground socket on my power supply. In hindsight, I should have created some sort of rig to measure the distance of the arcs to not only record performance, but also estimate the voltages based on the breakdown voltage of air. Still, I estimate that the arcs were roughly a millimeter long, and given that the breakdown voltage of air is roughly 3.0 kV&#x2F;mm, the coil was likely producing voltages near three kilovolts!&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#7&quot;&gt;7&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;arcs_light.png&quot; alt=&quot;Images of the electrical arcs produced by a Slayer Exciter Tesla Coil&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;These images clearer than the ones below, but the arc is not as visible since I still had the lights on. The pointy metal object at the top is a multimeter probe connected to the earth ground on my power supply.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;arcs_dark.png&quot; alt=&quot;Long exposure image in the dark of the electrical arcs created by a Slayer Exciter Tesla Coil&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;These arcs are brighter than the ones above, but I took a long exposure image so they are bit fuzzier. Also, I wasn&#x27;t holding the probe stable which is why it appears that there are two probes in the image on the left. I am not a photographer, so suggestions on how to take better images of these arcs are welcome.&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;h1 id=&quot;recommendations-for-the-next-iteration&quot;&gt;Recommendations for the next Iteration:&lt;a class=&quot;post-anchor&quot; href=&quot;#recommendations-for-the-next-iteration&quot; aria-label=&quot;Anchor link for: recommendations-for-the-next-iteration&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;p&gt;In the next iteration the most important task will be to protect the transistor and determine why it is breaking. It is most likely the inductive flyback from primary, but I would also like to verify the diode is protecting the base of the transistor. As explained in the video by Jim&#x27;s Cool Stuff, a snubber circuit could help to solve this, so I will research this and attempt to implement it. However, as noted by the Hyperspace Pirate video, this is a large amount of strain to place on a single component, and a BJT might not be as suited for the job as a mosfet.&lt;&#x2F;p&gt;
+&lt;p&gt;Once the transistor is protected, the power output and arc length of this circuit must be increased. This involves not only the logical assumption to increase input power, which cannot take place until the transistor is properly protected, but also increasing the ability of the circuit to multiply the voltage. Remembering the transformer equation from earlier, this is most easily done by increasing the turn ratio of the coils. In other words, I need to make a larger secondary coil.&lt;&#x2F;p&gt;
+&lt;p&gt;On the topic of coils I want to further research and experiment with different coupling coefficients. To accomplish this, I should buy an LCR meter so that I can measure the inductance of the coils to calculate their coupling coefficient.&lt;&#x2F;p&gt;
+&lt;p&gt;These measurements may also be useful to create a simulation of the circuit in &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.kicad.org&#x2F;&quot;&gt;KiCad&lt;&#x2F;a&gt; so that the circuit can be studied further.&lt;&#x2F;p&gt;
+&lt;p&gt;Returning to another one of my original goals, to document my findings and research, I will attempt to start a wiki that details all the theory related to the SETC. For now, this blog will serve as that source; however, I would like to have a centralized source of documentation that I can put in the repository. Currently, I am looking into using &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;mdBook&#x2F;&quot;&gt;mdBook&lt;&#x2F;a&gt;. In any case, everything will still be documented on this website.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion:&lt;a class=&quot;post-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;p&gt;In all, this was a rather successful iteration as not only was my mathematical very accurate, but I achieved the goal of creating a functioning proof of concept that could generate arcs. Further, I was able to learn a great deal about the basic theory behind the Tesla coil, document it, and observe it in my physical model. Overall, I am very excited to begin my next iteration and hopefully begin to measure voltages with a functional oscilloscope, and create larger arcs and higher voltages without frying more transistors.&lt;&#x2F;p&gt;
+&lt;p&gt;Thank you very much for taking the time to read this. If you have any comments, questions, concerns, or would like to make any suggestions to this post I encourage you to open an &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&#x2F;issues&quot;&gt;issue&lt;&#x2F;a&gt; (The &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;docs.codeberg.org&#x2F;getting-started&#x2F;issue-tracking-basics&#x2F;&quot;&gt;Codeberg Docs&lt;&#x2F;a&gt; have more information about issues and how to use them) in the project repository. I am sure that I have made a mistake in this post, and though I hope that others can learn from my writings, I do this mainly to better understand topics myself, so please do not hold back any corrections or opinions. If you have enjoyed this, please leaving a star on my &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;pages&quot;&gt;website&#x27;s repository&lt;&#x2F;a&gt; or on the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;the-oakden&#x2F;SimpleTC&quot;&gt;project repository&lt;&#x2F;a&gt;. Have an amazing day!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes:&lt;a class=&quot;post-anchor&quot; href=&quot;#footnotes&quot; aria-label=&quot;Anchor link for: footnotes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tesla_coil&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Resonant_inductive_coupling&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;&#x2F;sup&gt;
+&lt;p&gt;https:&#x2F;&#x2F;www.allaboutcircuits.com&#x2F;textbook&#x2F;reference&#x2F;chpt-1&#x2F;inductor-sizing-equation&#x2F;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;4&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;4&lt;&#x2F;sup&gt;
+&lt;p&gt;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Inductance#Solenoid&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;5&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;5&lt;&#x2F;sup&gt;
+&lt;p&gt;https:&#x2F;&#x2F;hamwaves.com&#x2F;inductance&#x2F;doc&#x2F;medhurst.1947.pdf&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;6&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;6&lt;&#x2F;sup&gt;
+&lt;p&gt;https:&#x2F;&#x2F;kaizerpowerelectronics.dk&#x2F;tesla-coils&#x2F;drsstc-design-guide&#x2F;secondary-coil&#x2F;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;7&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;7&lt;&#x2F;sup&gt;
+&lt;p&gt;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Breakdown_voltage&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</description>
+      </item>
+    </channel>
+</rss>
